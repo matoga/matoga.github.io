@@ -15,18 +15,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Martin Gazo — Computational Physics',
   description:
-    'Martin Gazo builds numerical tools and interactive software for exploring complex physical systems.',
+    'Martin Gazo studies quantum gases and turbulence, and builds numerical tools for exploring complex physical systems.',
   openGraph: {
     title: 'Martin Gazo — Computational Physics',
     description:
-      'Physics, computation, and useful tools for exploring complex physical systems.',
+      'Research in quantum gases and turbulence, alongside numerical tools for exploring complex physical systems.',
     images: ['https://matoga.github.io/website/og.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Martin Gazo — Computational Physics',
     description:
-      'Physics, computation, and useful tools for exploring complex physical systems.',
+      'Research in quantum gases and turbulence, alongside numerical tools for exploring complex physical systems.',
     images: ['https://matoga.github.io/website/og.png'],
   },
 };

@@ -49,6 +49,22 @@ h1 span { display: block; max-width: 900px; margin-top: 34px; margin-left: 19%; 
 .project-meta { color: var(--muted); line-height: 1.6; }
 .project-arrow { font-size: 25px; }
 
+.papers { border-top: 1px solid var(--line); padding: 110px 0 140px; }
+.papers-heading { align-items: start; }
+.papers-title h2 { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(46px, 7vw, 106px); font-weight: 400; line-height: 0.95; letter-spacing: -0.06em; }
+.papers-title > p { max-width: 610px; margin: 34px 0 0; color: var(--muted); font-size: 17px; line-height: 1.55; }
+.papers-links { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 28px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
+.papers-links a { border-bottom: 1px solid var(--ink); padding-bottom: 5px; }
+.paper-list { margin: 82px 0 0; padding: 0; list-style: none; }
+.paper-list li { margin: 0; }
+.paper { display: grid; grid-template-columns: 90px minmax(320px, 1fr) minmax(150px, 0.3fr) 30px; gap: 28px; align-items: start; border-top: 1px solid var(--line); padding: 30px 4px 34px; transition: padding 180ms ease, background 180ms ease; }
+.paper-list li:last-child .paper { border-bottom: 1px solid var(--line); }
+.paper:hover { padding-left: 16px; padding-right: 16px; background: rgba(255, 255, 255, 0.36); }
+.paper-number, .paper-citation { color: var(--muted); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
+.paper-main h3 { max-width: 920px; margin: 0 0 13px; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(25px, 3vw, 43px); font-weight: 400; line-height: 1.05; letter-spacing: -0.035em; }
+.paper-main p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+.paper-citation { display: flex; flex-direction: column; gap: 8px; line-height: 1.45; }
+
 .footer { border-top: 1px solid var(--line); padding: 110px 0 42px; }
 .footer-kicker { margin: 0 0 30px; color: var(--muted); font-size: 16px; }
 .footer-link { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--ink); padding-bottom: 20px; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(36px, 6vw, 86px); line-height: 1; letter-spacing: -0.055em; }
@@ -59,18 +75,23 @@ h1 span { display: block; max-width: 900px; margin-top: 34px; margin-left: 19%; 
   main { padding: 0 18px; }
   .nav { height: 82px; }
   .nav-links { gap: 16px; font-size: 10px; }
-  .nav-links a:first-child { display: none; }
+  .nav-links a:first-child, .nav-links a:last-child { display: none; }
   .hero { min-height: calc(100svh - 82px); padding-top: 70px; }
   h1 { font-size: clamp(66px, 22vw, 108px); }
   h1 span { margin: 24px 0 0 10%; font-size: clamp(31px, 10vw, 54px); }
   .hero-footer { justify-content: space-between; gap: 20px; }
   .hero-footer p { font-size: 15px; }
   .section-grid { grid-template-columns: 1fr; gap: 36px; }
-  .about, .work { padding: 74px 0 90px; }
+  .about, .work, .papers { padding: 74px 0 90px; }
   .about-copy .muted { margin-top: 38px; }
   .project { grid-template-columns: 44px 1fr 24px; gap: 12px; padding: 26px 0 30px; }
   .project-meta { grid-column: 2 / 3; }
   .project-arrow { grid-column: 3; grid-row: 1; }
+  .papers-heading { margin-bottom: 0; }
+  .paper-list { margin-top: 58px; }
+  .paper { grid-template-columns: 44px 1fr 24px; gap: 12px; padding: 26px 0 30px; }
+  .paper-citation { grid-column: 2 / 3; flex-direction: row; gap: 14px; }
+  .paper .project-arrow { grid-column: 3; grid-row: 1; }
   .footer { padding: 74px 0 28px; }
   .footer-meta { margin-top: 72px; flex-direction: column; gap: 10px; }
 }

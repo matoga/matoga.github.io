@@ -33,6 +33,68 @@ const projects = [
   },
 ];
 
+const papers = [
+  {
+    year: '2026',
+    venue: 'arXiv',
+    title:
+      'Weak wave turbulence as a precursor to universal coarsening in a homogeneous Bose gas',
+    authors:
+      'S. M. Fischer, M. Gazo, S. J. Morris, N. Maslov, H. Zhang, J. Etrych, et al.',
+    href: 'https://arxiv.org/abs/2605.22906',
+  },
+  {
+    year: '2026',
+    venue: 'arXiv',
+    title:
+      'Observation of Vinen turbulence during far-from-equilibrium Bose–Einstein condensation',
+    authors:
+      'S. J. Morris, M. Gazo, S. M. Fischer, H. Zhang, C. J. Ho, N. R. Cooper, et al.',
+    href: 'https://arxiv.org/abs/2604.28191',
+  },
+  {
+    year: '2026',
+    venue: 'arXiv',
+    title: 'A nonequilibrium equation of state for a turbulent 2D Bose gas',
+    authors:
+      'Y. Jiang, N. Maslov, A. Karailiev, C. Eigen, M. Gazo, Z. Hadzibabic',
+    href: 'https://arxiv.org/abs/2602.06131',
+  },
+  {
+    year: '2025',
+    venue: 'Science',
+    title: 'Universal coarsening in a homogeneous two-dimensional Bose gas',
+    authors:
+      'M. Gazo, A. Karailiev, T. Satoor, C. Eigen, M. Gałka, Z. Hadzibabic',
+    href: 'https://doi.org/10.1126/science.ado3487',
+  },
+  {
+    year: '2025',
+    venue: 'Nature',
+    title: 'A universal speed limit for spreading of coherence',
+    authors:
+      'G. Martirosyan, M. Gazo, J. Etrych, S. M. Fischer, S. J. Morris, C. J. Ho, et al.',
+    href: 'https://www.nature.com/articles/s41586-025-09735-z',
+  },
+  {
+    year: '2024',
+    venue: 'Phys. Rev. Lett.',
+    title: 'Observation of an inverse turbulent-wave cascade in a driven quantum gas',
+    authors:
+      'A. Karailiev, M. Gazo, M. Gałka, C. Eigen, T. Satoor, Z. Hadzibabic',
+    href: 'https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.133.243402',
+  },
+  {
+    year: '2022',
+    venue: 'Phys. Rev. Lett.',
+    title:
+      'Emergence of isotropy and dynamic scaling in 2D wave turbulence in a homogeneous Bose gas',
+    authors:
+      'M. Gałka, P. Christodoulou, M. Gazo, A. Karailiev, N. Dogra, J. Schmitt, Z. Hadzibabic',
+    href: 'https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.129.190402',
+  },
+];
+
 export default function Home() {
   return (
     <main>
@@ -43,6 +105,7 @@ export default function Home() {
         <div className="nav-links">
           <a href="#about">About</a>
           <a href="#work">Work</a>
+          <a href="#papers">Papers</a>
           <a href="https://github.com/matoga">GitHub ↗</a>
         </div>
       </nav>
@@ -105,8 +168,62 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="papers" id="papers">
+        <div className="section-grid section-heading papers-heading">
+          <p className="section-label">03 / Papers</p>
+          <div className="papers-title">
+            <h2>Selected publications</h2>
+            <p>
+              Experimental studies of turbulence, universal dynamics, and the
+              emergence of order in homogeneous quantum gases.
+            </p>
+            <div className="papers-links">
+              <a
+                href="https://scholar.google.com/citations?user=YmTW0ekAAAAJ&hl=en"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Google Scholar ↗
+              </a>
+              <a
+                href="https://www.zh.phy.cam.ac.uk/Publications.html"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Cambridge group publications ↗
+              </a>
+            </div>
+          </div>
+        </div>
+        <ol className="paper-list">
+          {papers.map((paper, index) => (
+            <li key={paper.href}>
+              <a
+                className="paper"
+                href={paper.href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className="paper-number">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <div className="paper-main">
+                  <h3>{paper.title}</h3>
+                  <p>{paper.authors}</p>
+                </div>
+                <div className="paper-citation">
+                  <span>{paper.venue}</span>
+                  <span>{paper.year}</span>
+                </div>
+                <span className="project-arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </section>
+
       <footer className="footer section-grid">
-        <p className="section-label">03 / Contact</p>
+        <p className="section-label">04 / Contact</p>
         <div className="footer-main">
           <p className="footer-kicker">Have a question or an interesting problem?</p>
           <a className="footer-link" href="https://github.com/matoga">
