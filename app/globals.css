@@ -278,11 +278,14 @@ h2 {
 }
 
 .software-list li {
+  display: flex;
+  flex-direction: column;
+  min-height: 165px;
   padding-top: 18px;
   border-top: 1px solid var(--rule);
 }
 
-.software-list a {
+.software-list .software-title {
   color: var(--text);
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 18px;
@@ -293,6 +296,14 @@ h2 {
   color: var(--muted);
   font-size: 13px;
   line-height: 1.55;
+}
+
+.software-links {
+  display: flex;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 18px;
+  font-size: 12px;
 }
 
 footer {

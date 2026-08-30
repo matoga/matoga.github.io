@@ -55,18 +55,37 @@ const publications = [
 const software = [
   {
     name: 'Wave kinetic equation',
-    description: 'Interactive numerical solver for wave kinetics in box-trap geometries.',
-    href: 'https://github.com/matoga/wke',
+    description: 'Interactive wave-kinetic-equation solver with box-trap volume calibration.',
+    site: 'https://matoga.github.io/wke/',
+    github: 'https://github.com/matoga/wke',
+  },
+  {
+    name: '2D GPE',
+    description: 'Browser-based two-dimensional Gross-Pitaevskii equation simulator.',
+    site: 'https://web-gpe.vercel.app/',
+    github: 'https://github.com/matoga/WebGPE',
   },
   {
     name: 'Two-component GPE solver',
     description: 'Imaginary-time solver for three-dimensional, two-component quantum gases.',
-    href: 'https://github.com/matoga/imag-GPE-2-component-solver',
+    github: 'https://github.com/matoga/imag-GPE-2-component-solver',
+  },
+  {
+    name: 'BESee',
+    description: 'Desktop application for loading, fitting, and analysing cold-atom absorption images.',
+    site: 'https://matoga.github.io/besee/',
+    github: 'https://github.com/matoga/besee',
+  },
+  {
+    name: 'BEC3 Calculator',
+    description: 'Web calculators for the BEC3 experiment, including Feshbach-field and box-trap calibrations.',
+    site: 'https://bec3calculator.vercel.app/',
+    github: 'https://github.com/matoga/bec3-calc',
   },
   {
     name: 'AMOP',
     description: 'Wolfram Language package for atomic, molecular, and optical physics calculations.',
-    href: 'https://github.com/matoga/amop',
+    github: 'https://github.com/matoga/amop',
   },
 ];
 
@@ -244,11 +263,26 @@ export default function Home() {
 
           <ul className="software-list">
             {software.map((project) => (
-              <li key={project.href}>
-                <a href={project.href} target="_blank" rel="noreferrer">
+              <li key={project.github}>
+                <a
+                  className="software-title"
+                  href={project.site ?? project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {project.name}
                 </a>
                 <p>{project.description}</p>
+                <div className="software-links">
+                  {project.site && (
+                    <a href={project.site} target="_blank" rel="noreferrer">
+                      Open app
+                    </a>
+                  )}
+                  <a href={project.github} target="_blank" rel="noreferrer">
+                    GitHub
+                  </a>
+                </div>
               </li>
             ))}
           </ul>
