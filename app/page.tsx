@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const publications = [
   {
     year: '2026',
@@ -65,6 +67,32 @@ const software = [
     name: 'AMOP',
     description: 'Wolfram Language package for atomic, molecular, and optical physics calculations.',
     href: 'https://github.com/matoga/amop',
+  },
+];
+
+const highlights = [
+  {
+    journal: 'Science',
+    note: 'First author',
+    title: 'Universal coarsening in a homogeneous two-dimensional Bose gas',
+    summary:
+      'We prepared the same two-dimensional quantum gas in several very different disordered states and watched it become ordered. After an initial period, every run followed the same scaling laws. The details of how the gas started stopped mattering. The experiment shows that very different systems far from equilibrium can share the same route towards order.',
+    image: '/publications/science-coarsening.png',
+    imageAlt: 'Optical tables and vacuum apparatus used to study a two-dimensional quantum gas',
+    paper: 'https://doi.org/10.1126/science.ado3487',
+    story:
+      'https://www.phy.cam.ac.uk/news/ultracold-atoms-reveal-universal-rules-far-from-equilibrium/',
+  },
+  {
+    journal: 'Nature',
+    note: 'Co-author',
+    title: 'A universal speed limit for spreading of coherence',
+    summary:
+      'When a disordered quantum gas starts to condense, coherence first grows faster if the atoms interact more strongly. At larger distances, that advantage disappears. We found a universal upper rate set only by Planck\'s constant and the atom\'s mass, placing a fundamental limit on how quickly long-range quantum order can form.',
+    image: '/publications/nature-coherence.png',
+    imageAlt: 'Ultracold atom experiment illuminated by green laser light',
+    paper: 'https://www.nature.com/articles/s41586-025-09735-z',
+    story: 'https://www.phy.cam.ac.uk/news/a-speed-limit-for-spreading-of-coherence/',
   },
 ];
 
@@ -136,6 +164,49 @@ export default function Home() {
               Google Scholar
             </a>
           </div>
+
+          <div className="research-highlights">
+            {highlights.map((highlight) => (
+              <article className="research-highlight" key={highlight.paper}>
+                <a
+                  className="highlight-image"
+                  href={highlight.story}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Read the Cambridge story about ${highlight.title}`}
+                >
+                  <Image
+                    src={highlight.image}
+                    alt={highlight.imageAlt}
+                    width={1000}
+                    height={660}
+                    sizes="(max-width: 680px) calc(100vw - 30px), 398px"
+                  />
+                </a>
+                <div className="highlight-copy">
+                  <p className="highlight-meta">
+                    {highlight.journal} <span>{highlight.note}</span>
+                  </p>
+                  <h3>
+                    <a href={highlight.paper} target="_blank" rel="noreferrer">
+                      {highlight.title}
+                    </a>
+                  </h3>
+                  <p>{highlight.summary}</p>
+                  <div className="highlight-links">
+                    <a href={highlight.paper} target="_blank" rel="noreferrer">
+                      Paper
+                    </a>
+                    <a href={highlight.story} target="_blank" rel="noreferrer">
+                      Cambridge story
+                    </a>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <h3 className="all-papers-title">All papers</h3>
 
           <ol className="publication-list">
             {publications.map((publication) => (
