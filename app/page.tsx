@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 const publications = [
   {
     year: '2026',
@@ -194,12 +192,13 @@ export default function Home() {
                   rel="noreferrer"
                   aria-label={`Read the Cambridge story about ${highlight.title}`}
                 >
-                  <Image
+                  {/* The source images are already sized for this layout. */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src={highlight.image}
                     alt={highlight.imageAlt}
                     width={1000}
                     height={660}
-                    sizes="(max-width: 680px) calc(100vw - 30px), 398px"
                   />
                 </a>
                 <div className="highlight-copy">
