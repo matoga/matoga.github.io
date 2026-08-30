@@ -81,6 +81,12 @@ const software = [
     github: 'https://github.com/matoga/bec3-calc',
   },
   {
+    name: 'BEC3 Status',
+    description: 'Live experiment dashboard for lab telemetry, environmental data, images, and oscilloscope traces.',
+    site: 'https://bec3status.pages.dev/',
+    github: 'https://github.com/matoga/bec3-lab-logger',
+  },
+  {
     name: 'AMOP',
     description: 'Wolfram Language package for atomic, molecular, and optical physics calculations.',
     github: 'https://github.com/matoga/amop',
