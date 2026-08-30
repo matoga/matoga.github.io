@@ -1,241 +1,193 @@
-const projects = [
-  {
-    number: '01',
-    title: 'Wave kinetic equation',
-    description:
-      'An interactive solver for exploring wave kinetics and calibrating box-trap volumes.',
-    meta: 'TypeScript · Scientific computing',
-    href: 'https://github.com/matoga/wke',
-  },
-  {
-    number: '02',
-    title: 'Two-component GPE solver',
-    description:
-      'An imaginary-time solver for three-dimensional, two-component quantum gases.',
-    meta: 'JavaScript · Numerical methods',
-    href: 'https://github.com/matoga/imag-GPE-2-component-solver',
-  },
-  {
-    number: '03',
-    title: 'AMOP',
-    description:
-      'A Wolfram Language package for atomic, molecular and optical physics workflows.',
-    meta: 'Wolfram Language · Research tools',
-    href: 'https://github.com/matoga/amop',
-  },
-  {
-    number: '04',
-    title: 'Raspberry Pi lab logger',
-    description:
-      'A lightweight temperature and humidity logger built for a Raspberry Pi and Grove sensors.',
-    meta: 'Python · Lab infrastructure',
-    href: 'https://github.com/matoga/rpi-bec3-log-agent',
-  },
-];
-
-const papers = [
+const publications = [
   {
     year: '2026',
-    venue: 'arXiv',
-    title:
-      'Weak wave turbulence as a precursor to universal coarsening in a homogeneous Bose gas',
-    authors:
-      'S. M. Fischer, M. Gazo, S. J. Morris, N. Maslov, H. Zhang, J. Etrych, et al.',
+    title: 'Weak wave turbulence as a precursor to universal coarsening in a homogeneous Bose gas',
+    authors: 'S. M. Fischer, M. Gazo, S. J. Morris, N. Maslov, H. Zhang, J. Etrych, et al.',
+    journal: 'arXiv:2605.22906',
     href: 'https://arxiv.org/abs/2605.22906',
   },
   {
     year: '2026',
-    venue: 'arXiv',
-    title:
-      'Observation of Vinen turbulence during far-from-equilibrium Bose–Einstein condensation',
-    authors:
-      'S. J. Morris, M. Gazo, S. M. Fischer, H. Zhang, C. J. Ho, N. R. Cooper, et al.',
+    title: 'Observation of Vinen turbulence during far-from-equilibrium Bose-Einstein condensation',
+    authors: 'S. J. Morris, M. Gazo, S. M. Fischer, H. Zhang, C. J. Ho, N. R. Cooper, et al.',
+    journal: 'arXiv:2604.28191',
     href: 'https://arxiv.org/abs/2604.28191',
   },
   {
     year: '2026',
-    venue: 'arXiv',
     title: 'A nonequilibrium equation of state for a turbulent 2D Bose gas',
-    authors:
-      'Y. Jiang, N. Maslov, A. Karailiev, C. Eigen, M. Gazo, Z. Hadzibabic',
+    authors: 'Y. Jiang, N. Maslov, A. Karailiev, C. Eigen, M. Gazo, Z. Hadzibabic',
+    journal: 'arXiv:2602.06131',
     href: 'https://arxiv.org/abs/2602.06131',
   },
   {
     year: '2025',
-    venue: 'Science',
     title: 'Universal coarsening in a homogeneous two-dimensional Bose gas',
-    authors:
-      'M. Gazo, A. Karailiev, T. Satoor, C. Eigen, M. Gałka, Z. Hadzibabic',
+    authors: 'M. Gazo, A. Karailiev, T. Satoor, C. Eigen, M. Gałka, Z. Hadzibabic',
+    journal: 'Science 389, 802',
     href: 'https://doi.org/10.1126/science.ado3487',
   },
   {
     year: '2025',
-    venue: 'Nature',
     title: 'A universal speed limit for spreading of coherence',
-    authors:
-      'G. Martirosyan, M. Gazo, J. Etrych, S. M. Fischer, S. J. Morris, C. J. Ho, et al.',
+    authors: 'G. Martirosyan, M. Gazo, J. Etrych, S. M. Fischer, S. J. Morris, C. J. Ho, et al.',
+    journal: 'Nature 647, 608',
     href: 'https://www.nature.com/articles/s41586-025-09735-z',
   },
   {
     year: '2024',
-    venue: 'Phys. Rev. Lett.',
     title: 'Observation of an inverse turbulent-wave cascade in a driven quantum gas',
-    authors:
-      'A. Karailiev, M. Gazo, M. Gałka, C. Eigen, T. Satoor, Z. Hadzibabic',
+    authors: 'A. Karailiev, M. Gazo, M. Gałka, C. Eigen, T. Satoor, Z. Hadzibabic',
+    journal: 'Physical Review Letters 133, 243402',
     href: 'https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.133.243402',
   },
   {
     year: '2022',
-    venue: 'Phys. Rev. Lett.',
-    title:
-      'Emergence of isotropy and dynamic scaling in 2D wave turbulence in a homogeneous Bose gas',
-    authors:
-      'M. Gałka, P. Christodoulou, M. Gazo, A. Karailiev, N. Dogra, J. Schmitt, Z. Hadzibabic',
+    title: 'Emergence of isotropy and dynamic scaling in 2D wave turbulence in a homogeneous Bose gas',
+    authors: 'M. Gałka, P. Christodoulou, M. Gazo, A. Karailiev, N. Dogra, J. Schmitt, Z. Hadzibabic',
+    journal: 'Physical Review Letters 129, 190402',
     href: 'https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.129.190402',
+  },
+];
+
+const software = [
+  {
+    name: 'Wave kinetic equation',
+    description: 'Interactive numerical solver for wave kinetics in box-trap geometries.',
+    href: 'https://github.com/matoga/wke',
+  },
+  {
+    name: 'Two-component GPE solver',
+    description: 'Imaginary-time solver for three-dimensional, two-component quantum gases.',
+    href: 'https://github.com/matoga/imag-GPE-2-component-solver',
+  },
+  {
+    name: 'AMOP',
+    description: 'Wolfram Language package for atomic, molecular, and optical physics calculations.',
+    href: 'https://github.com/matoga/amop',
   },
 ];
 
 export default function Home() {
   return (
-    <main>
-      <nav className="nav" aria-label="Primary navigation">
-        <a className="wordmark" href="#top" aria-label="Martin Gazo, home">
-          MG<span className="wordmark-dot">.</span>
-        </a>
-        <div className="nav-links">
-          <a href="#about">About</a>
-          <a href="#work">Work</a>
-          <a href="#papers">Papers</a>
-          <a href="https://github.com/matoga">GitHub ↗</a>
-        </div>
-      </nav>
+    <div className="site-shell">
+      <header className="site-header">
+        <a className="site-name" href="#about">Martin Gazo</a>
+        <nav aria-label="Primary navigation">
+          <a href="#about">about</a>
+          <a href="#publications">publications</a>
+          <a href="#software">software</a>
+        </nav>
+      </header>
 
-      <section className="hero" id="top">
-        <p className="eyebrow">Cambridge, UK · Computational physics</p>
-        <h1>
-          Martin Gazo
-          <span>Physics, computation, and useful tools.</span>
-        </h1>
-        <div className="hero-footer">
-          <p>
-            I build numerical tools and interactive software for exploring
-            complex physical systems.
+      <main>
+        <section className="intro" id="about">
+          <h1>Martin Gazo</h1>
+          <p className="role">
+            PhD researcher in experimental quantum physics at the University of Cambridge
           </p>
-          <a className="round-link" href="#work" aria-label="View selected work">
-            ↓
-          </a>
-        </div>
-      </section>
 
-      <section className="about section-grid" id="about">
-        <p className="section-label">01 / About</p>
-        <div className="about-copy">
-          <p>
-            My work sits between theoretical questions and practical software:
-            turning equations into tools that make ideas easier to test,
-            inspect, and understand.
-          </p>
-          <p className="muted">
-            Current interests include quantum gases, wave kinetics, numerical
-            methods, and small, durable research utilities.
-          </p>
-        </div>
-      </section>
+          <div className="intro-copy">
+            <p>
+              I am a researcher in the{' '}
+              <a href="https://www.zh.phy.cam.ac.uk/" target="_blank" rel="noreferrer">
+                Quantum Many-Body Dynamics group
+              </a>{' '}
+              led by Zoran Hadzibabic. My work concerns far-from-equilibrium dynamics,
+              turbulence, and universal behaviour in homogeneous quantum gases.
+            </p>
+            <p>
+              I am finishing my doctorate and leaving academia. I am interested in work
+              that combines quantitative reasoning, computation, and difficult technical
+              problems.
+            </p>
+          </div>
 
-      <section className="work" id="work">
-        <div className="section-grid section-heading">
-          <p className="section-label">02 / Selected work</p>
-          <h2>Open-source projects</h2>
-        </div>
-        <div className="project-list">
-          {projects.map((project) => (
+          <div className="profile-links" aria-label="External profiles">
             <a
-              className="project"
-              href={project.href}
-              key={project.number}
+              href="https://scholar.google.com/citations?user=YmTW0ekAAAAJ&hl=en"
               target="_blank"
               rel="noreferrer"
             >
-              <span className="project-number">{project.number}</span>
-              <div>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-              </div>
-              <span className="project-meta">{project.meta}</span>
-              <span className="project-arrow" aria-hidden="true">↗</span>
+              Google Scholar
             </a>
-          ))}
-        </div>
-      </section>
-
-      <section className="papers" id="papers">
-        <div className="section-grid section-heading papers-heading">
-          <p className="section-label">03 / Papers</p>
-          <div className="papers-title">
-            <h2>Selected publications</h2>
-            <p>
-              Experimental studies of turbulence, universal dynamics, and the
-              emergence of order in homogeneous quantum gases.
-            </p>
-            <div className="papers-links">
-              <a
-                href="https://scholar.google.com/citations?user=YmTW0ekAAAAJ&hl=en"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Google Scholar ↗
-              </a>
-              <a
-                href="https://www.zh.phy.cam.ac.uk/Publications.html"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Cambridge group publications ↗
-              </a>
-            </div>
+            <a href="https://github.com/matoga" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+            <a
+              href="https://www.zh.phy.cam.ac.uk/Publications.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Group publications
+            </a>
           </div>
-        </div>
-        <ol className="paper-list">
-          {papers.map((paper, index) => (
-            <li key={paper.href}>
-              <a
-                className="paper"
-                href={paper.href}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span className="paper-number">
-                  {String(index + 1).padStart(2, '0')}
-                </span>
-                <div className="paper-main">
-                  <h3>{paper.title}</h3>
-                  <p>{paper.authors}</p>
-                </div>
-                <div className="paper-citation">
-                  <span>{paper.venue}</span>
-                  <span>{paper.year}</span>
-                </div>
-                <span className="project-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-          ))}
-        </ol>
-      </section>
+        </section>
 
-      <footer className="footer section-grid">
-        <p className="section-label">04 / Contact</p>
-        <div className="footer-main">
-          <p className="footer-kicker">Have a question or an interesting problem?</p>
-          <a className="footer-link" href="https://github.com/matoga">
-            Find me on GitHub <span aria-hidden="true">↗</span>
-          </a>
-          <div className="footer-meta">
-            <span>Martin Gazo</span>
-            <span>Cambridge, UK</span>
-            <span>© {new Date().getFullYear()}</span>
+        <section className="section" id="publications">
+          <div className="section-title-row">
+            <h2>Publications</h2>
+            <a
+              className="section-link"
+              href="https://scholar.google.com/citations?user=YmTW0ekAAAAJ&hl=en"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Google Scholar
+            </a>
           </div>
-        </div>
+
+          <ol className="publication-list">
+            {publications.map((publication) => (
+              <li key={publication.href}>
+                <span className="year">{publication.year}</span>
+                <div className="publication">
+                  <a
+                    className="publication-title"
+                    href={publication.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {publication.title}
+                  </a>
+                  <p>{publication.authors}</p>
+                  <p className="journal">{publication.journal}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section className="section" id="software">
+          <div className="section-title-row">
+            <h2>Software</h2>
+            <a
+              className="section-link"
+              href="https://github.com/matoga"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+          </div>
+
+          <ul className="software-list">
+            {software.map((project) => (
+              <li key={project.href}>
+                <a href={project.href} target="_blank" rel="noreferrer">
+                  {project.name}
+                </a>
+                <p>{project.description}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </main>
+
+      <footer>
+        <span>Martin Gazo</span>
+        <span>Cambridge, UK</span>
       </footer>
-    </main>
+    </div>
   );
 }
