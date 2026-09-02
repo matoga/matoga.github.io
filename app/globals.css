@@ -136,9 +136,27 @@ h1 {
   font-size: 14px;
 }
 
+.profile-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.profile-link-icon {
+  width: 17px;
+  height: 17px;
+  display: block;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
 .section {
   padding: 64px 0 72px;
   border-top: 1px solid var(--rule);
+}
+
+#publications {
+  padding-bottom: 0;
 }
 
 .section-title-row {
@@ -186,8 +204,7 @@ h2 {
 
 .highlight-images {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .highlight-carousel {
@@ -340,6 +357,30 @@ h2 {
   margin-top: 2px;
   color: var(--text);
   font-style: italic;
+}
+
+.author-glyph {
+  margin-left: 1px;
+  color: currentColor;
+  font-size: 0.72em;
+  font-weight: 700;
+  line-height: 0;
+}
+
+.author-glyph-corresponding {
+  font-size: 1em;
+}
+
+.author-self {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.author-note {
+  margin-top: -4px;
+  color: var(--muted);
+  font-size: 12px;
 }
 
 .software-list {

@@ -2,14 +2,16 @@ const publications = [
   {
     year: '2026',
     title: 'Weak wave turbulence as a precursor to universal coarsening in a homogeneous Bose gas',
-    authors: 'S. M. Fischer, M. Gazo, S. J. Morris, N. Maslov, H. Zhang, J. Etrych, et al.',
+    authors:
+      'S. M. Fischer, M. Gazo, S. J. Morris, N. Maslov, H. Zhang, J. Etrych, G. Martirosyan, C. Eigen, Z. Hadzibabic',
     journal: 'arXiv:2605.22906',
     href: 'https://arxiv.org/abs/2605.22906',
   },
   {
     year: '2026',
     title: 'Observation of Vinen turbulence during far-from-equilibrium Bose-Einstein condensation',
-    authors: 'S. J. Morris, M. Gazo, S. M. Fischer, H. Zhang, C. J. Ho, N. R. Cooper, et al.',
+    authors:
+      'S. J. Morris, M. Gazo, S. M. Fischer, H. Zhang, C. J. Ho, N. R. Cooper, C. Eigen, Z. Hadzibabic',
     journal: 'arXiv:2604.28191',
     href: 'https://arxiv.org/abs/2604.28191',
   },
@@ -17,6 +19,9 @@ const publications = [
     year: '2026',
     title: 'A nonequilibrium equation of state for a turbulent 2D Bose gas',
     authors: 'Y. Jiang, N. Maslov, A. Karailiev, C. Eigen, M. Gazo, Z. Hadzibabic',
+    equalContributionAuthors: ['Y. Jiang', 'N. Maslov'],
+    correspondingAuthor: 'M. Gazo',
+    authorNote: '* Equal contribution',
     journal: 'arXiv:2602.06131',
     href: 'https://arxiv.org/abs/2602.06131',
   },
@@ -31,7 +36,8 @@ const publications = [
   {
     year: '2025',
     title: 'A universal speed limit for spreading of coherence',
-    authors: 'G. Martirosyan, M. Gazo, J. Etrych, S. M. Fischer, S. J. Morris, C. J. Ho, et al.',
+    authors:
+      'G. Martirosyan, M. Gazo, J. Etrych, S. M. Fischer, S. J. Morris, C. J. Ho, C. Eigen, Z. Hadzibabic',
     journal: 'Nature 647, 608',
     href: 'https://www.nature.com/articles/s41586-025-09735-z',
     arxiv: 'https://arxiv.org/abs/2410.08204',
@@ -57,7 +63,8 @@ const publications = [
 const software = [
   {
     name: 'BESee',
-    description: 'C#/.NET desktop app for viewing, fitting, and analysing cold-atom absorption images.',
+    description:
+      'The largest project here, BESee is a C#/.NET desktop app for live viewing, fitting and analysing cold-atom absorption images. It is designed to load thousands of images efficiently and run fast CPU-based fits. It was inspired by Alex Gaunt’s Analysis GpUI and built as its replacement.',
     site: 'https://matoga.github.io/besee/',
     image: '/software/besee.png',
     imageAlt: 'BESee download page showing the absorption-image analysis application',
@@ -71,14 +78,16 @@ const software = [
   },
   {
     name: 'BEC3 Status',
-    description: 'Live experiment dashboard for lab telemetry, environmental data, images, and oscilloscope traces.',
+    description:
+      'Live experiment dashboard for lab telemetry, environmental data, images, and oscilloscope traces, built on Cloudflare D1. Still in active use, so it is password-protected.',
     site: 'https://bec3status.pages.dev/',
     image: '/software/bec3-status.png',
     imageAlt: 'Dark BEC3 lab status dashboard with image, air, and photodiode panels',
   },
   {
     name: '2D GPE',
-    description: 'Browser-based two-dimensional Gross-Pitaevskii equation simulator.',
+    description:
+      'Browser-based interactive two-dimensional Gross-Pitaevskii equation simulator that is fun to play with!',
     site: 'https://web-gpe.vercel.app/',
     image: '/software/web-gpe.png',
     imageAlt: 'Two-dimensional Bose-Einstein condensate simulation interface',
@@ -93,7 +102,8 @@ const software = [
   },
   {
     name: 'Two-Component Imaginary Time GPE Solver',
-    description: 'Browser-based imaginary-time solver for three-dimensional, two-component quantum gases.',
+    description:
+      'Holding two spin states in a box is trickier than it sounds. This imaginary-time solver models three-dimensional, two-component quantum gases.',
     site: 'https://imaggpe2comp.vercel.app/',
     github: 'https://github.com/matoga/imag-GPE-2-component-solver',
     image: '/software/two-component-gpe.png',
@@ -133,12 +143,8 @@ const highlights = [
     summary:
       'A two-dimensional Bose gas driven far from equilibrium and released from several very different disordered states thermalises along a single, shared path. Once initial-state-dependent effects are accounted for, we found experimentally that the dynamics follow the scaling predicted by the theory of far-from-equilibrium Bose-gas dynamics: coarsening at long lengthscales and weak-wave turbulence at short scales. We also show how these initial-state effects matter for any study of universality far from equilibrium.',
     image: '/publications/science-coarsening.png',
-    imageAlt: 'Optical tables and vacuum apparatus used to study a two-dimensional quantum gas',
-    secondaryImage: '/publications/2dcoarse.png',
-    secondaryImageAlt: 'Momentum-space distributions converging during coarsening',
+    imageAlt: 'Momentum distributions showing particle and energy transport and universal scaling',
     paper: 'https://doi.org/10.1126/science.ado3487',
-    story:
-      'https://www.phy.cam.ac.uk/news/ultracold-atoms-reveal-universal-rules-far-from-equilibrium/',
     primaryLinks: [
       { label: 'Science', href: 'https://doi.org/10.1126/science.ado3487' },
       { label: 'arXiv', href: 'https://arxiv.org/abs/2312.09248' },
@@ -159,10 +165,7 @@ const highlights = [
       'When a disordered Bose gas starts to condense, coherence first grows faster if the atoms interact more strongly. At larger distances, that advantage disappears. We found a universal upper rate set only by Planck\'s constant and the atom\'s mass, placing a fundamental limit on how quickly long-range quantum order can form.',
     image: '/publications/nature-coherence.png',
     imageAlt: 'Ultracold atom experiment illuminated by green laser light',
-    secondaryImage: '/publications/Speedlimit.jpg',
-    secondaryImageAlt: 'Illustration of the universal speed limit for spreading coherence',
     paper: 'https://www.nature.com/articles/s41586-025-09735-z',
-    story: 'https://www.phy.cam.ac.uk/news/a-speed-limit-for-spreading-of-coherence/',
     primaryLinks: [
       { label: 'Nature', href: 'https://www.nature.com/articles/s41586-025-09735-z' },
       { label: 'arXiv', href: 'https://arxiv.org/abs/2410.08204' },
@@ -184,6 +187,30 @@ const highlights = [
   },
 ];
 
+function renderAuthors(publication: (typeof publications)[number]) {
+  const equalContributors =
+    'equalContributionAuthors' in publication ? publication.equalContributionAuthors : [];
+  const correspondingAuthor = 'correspondingAuthor' in publication ? publication.correspondingAuthor : null;
+  const authors = publication.authors.split(', ');
+
+  return authors.map((author, index) => (
+    <span key={`${author}-${index}`}>
+      <span className={author === 'M. Gazo' ? 'author-self' : undefined}>{author}</span>
+      {equalContributors.includes(author) && (
+        <sup className="author-glyph" aria-label="Equal contribution">
+          *
+        </sup>
+      )}
+      {correspondingAuthor === author && (
+        <sup className="author-glyph author-glyph-corresponding" aria-label="Corresponding author">
+          ✉
+        </sup>
+      )}
+      {index < authors.length - 1 && ', '}
+    </span>
+  ));
+}
+
 export default function Home() {
   return (
     <div className="site-shell">
@@ -202,7 +229,7 @@ export default function Home() {
             <div>
               <h1>Martin Gazo</h1>
               <p className="role">
-                Researcher in experimental quantum physics at the University of Cambridge
+                Experimental physicist specialising in quantum gases
               </p>
 
               <div className="intro-copy">
@@ -223,9 +250,23 @@ export default function Home() {
                   target="_blank"
                   rel="noreferrer"
                 >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    className="profile-link-icon"
+                    src="/icons/google-scholar.webp"
+                    alt=""
+                    aria-hidden="true"
+                  />
                   Google Scholar
                 </a>
                 <a href="https://github.com/matoga" target="_blank" rel="noreferrer">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    className="profile-link-icon"
+                    src="/icons/github.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
                   GitHub
                 </a>
                 <a
@@ -233,6 +274,13 @@ export default function Home() {
                   target="_blank"
                   rel="noreferrer"
                 >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    className="profile-link-icon"
+                    src="/icons/linkedin.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
                   LinkedIn
                 </a>
               </div>
@@ -265,35 +313,12 @@ export default function Home() {
           <div className="research-highlights">
             {highlights.map((highlight) => (
               <article className="research-highlight" key={highlight.paper}>
-                <div className="highlight-images highlight-carousel">
-                  <a
-                    className="highlight-image"
-                    href={highlight.story}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`Read the Cambridge story about ${highlight.title}`}
-                  >
+                <div className="highlight-images">
+                  <div className="highlight-image">
                     {/* The source images are already sized for this layout. */}
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={highlight.image} alt={highlight.imageAlt} width={1000} height={660} />
-                  </a>
-                  {highlight.secondaryImage && (
-                    <a
-                      className="highlight-image"
-                      href={highlight.story}
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label={`Read the Cambridge story about ${highlight.title}`}
-                    >
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={highlight.secondaryImage}
-                        alt={highlight.secondaryImageAlt}
-                        width={1000}
-                        height={660}
-                      />
-                    </a>
-                  )}
+                  </div>
                 </div>
                 <div className="highlight-copy">
                   <p className="highlight-meta">
@@ -350,9 +375,12 @@ export default function Home() {
                   >
                     {publication.title}
                   </a>
-                  <p>{publication.authors}</p>
+                  <p>{renderAuthors(publication)}</p>
+                  {publication.authorNote && <p className="author-note">{publication.authorNote}</p>}
                   <p className="journal">
-                    {publication.journal}
+                    <a href={publication.href} target="_blank" rel="noreferrer">
+                      {publication.journal}
+                    </a>
                     {publication.arxiv && (
                       <>
                         {' · '}
@@ -431,7 +459,7 @@ export default function Home() {
       </main>
 
       <footer>
-        <span>Martin Gazo</span>
+        <span>© 2026 Martin Gazo</span>
         <span>Cambridge, UK</span>
       </footer>
     </div>
