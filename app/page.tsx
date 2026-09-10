@@ -142,8 +142,12 @@ const highlights = [
     title: 'Universal coarsening in a homogeneous two-dimensional Bose gas',
     summary:
       'A two-dimensional Bose gas driven far from equilibrium and released from several very different disordered states thermalises along a single, shared path. Once initial-state-dependent effects are accounted for, we found experimentally that the dynamics follow the scaling predicted by the theory of far-from-equilibrium Bose-gas dynamics: coarsening at long lengthscales and weak-wave turbulence at short scales. We also show how these initial-state effects matter for any study of universality far from equilibrium.',
-    image: '/publications/science-coarsening.png',
-    imageAlt: 'Momentum distributions showing particle and energy transport and universal scaling',
+    images: [
+      {
+        src: '/publications/science-coarsening.png',
+        alt: 'Momentum distributions showing particle and energy transport and universal scaling',
+      },
+    ],
     paper: 'https://doi.org/10.1126/science.ado3487',
     primaryLinks: [
       { label: 'Science', href: 'https://doi.org/10.1126/science.ado3487' },
@@ -163,8 +167,16 @@ const highlights = [
     title: 'A universal speed limit for spreading of coherence',
     summary:
       'When a disordered Bose gas starts to condense, coherence first grows faster if the atoms interact more strongly. At larger distances, that advantage disappears. We found a universal speed limit set only by Planck\'s constant and the atom\'s mass, placing a fundamental limit on how quickly long-range quantum order can form.',
-    image: '/publications/nature-coherence.png',
-    imageAlt: 'Ultracold atom experiment illuminated by green laser light',
+    images: [
+      {
+        src: '/publications/nature-coherence.png',
+        alt: 'Ultracold atom experiment illuminated by green laser light',
+      },
+      {
+        src: '/publications/nature-speed-limit-plot.png',
+        alt: 'Coherence-length-squared growth curves for two interaction strengths, next to a speed-limit sign reading 3.4 ħ/m',
+      },
+    ],
     paper: 'https://www.nature.com/articles/s41586-025-09735-z',
     primaryLinks: [
       { label: 'Nature', href: 'https://www.nature.com/articles/s41586-025-09735-z' },
@@ -313,12 +325,18 @@ export default function Home() {
           <div className="research-highlights">
             {highlights.map((highlight) => (
               <article className="research-highlight" key={highlight.paper}>
-                <div className="highlight-images">
-                  <div className="highlight-image">
-                    {/* The source images are already sized for this layout. */}
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={highlight.image} alt={highlight.imageAlt} width={1000} height={660} />
-                  </div>
+                <div
+                  className={
+                    highlight.images.length > 1 ? 'highlight-images highlight-carousel' : 'highlight-images'
+                  }
+                >
+                  {highlight.images.map((image) => (
+                    <div className="highlight-image" key={image.src}>
+                      {/* The source images are already sized for this layout. */}
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={image.src} alt={image.alt} width={1000} height={660} />
+                    </div>
+                  ))}
                 </div>
                 <div className="highlight-copy">
                   <p className="highlight-meta">
