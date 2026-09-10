@@ -208,15 +208,47 @@ h2 {
 }
 
 .highlight-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight-carousel .highlight-track {
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
+  transition: transform 420ms ease;
 }
 
 .highlight-carousel .highlight-image {
   flex: 0 0 100%;
-  scroll-snap-align: start;
+}
+
+.highlight-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.highlight-dot {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--rule);
+  cursor: pointer;
+}
+
+.highlight-dot:hover {
+  background: var(--muted);
+}
+
+.highlight-dot[aria-current='true'] {
+  background: var(--accent);
+}
+
+.highlight-dot:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .highlight-image {
@@ -526,6 +558,10 @@ footer {
   }
 
   .highlight-image img {
+    transition: none;
+  }
+
+  .highlight-track {
     transition: none;
   }
 

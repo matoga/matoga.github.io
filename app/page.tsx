@@ -1,3 +1,5 @@
+import { HighlightCarousel } from './HighlightCarousel';
+
 const publications = [
   {
     year: '2026',
@@ -325,19 +327,7 @@ export default function Home() {
           <div className="research-highlights">
             {highlights.map((highlight) => (
               <article className="research-highlight" key={highlight.paper}>
-                <div
-                  className={
-                    highlight.images.length > 1 ? 'highlight-images highlight-carousel' : 'highlight-images'
-                  }
-                >
-                  {highlight.images.map((image) => (
-                    <div className="highlight-image" key={image.src}>
-                      {/* The source images are already sized for this layout. */}
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={image.src} alt={image.alt} width={1000} height={660} />
-                    </div>
-                  ))}
-                </div>
+                <HighlightCarousel images={highlight.images} />
                 <div className="highlight-copy">
                   <p className="highlight-meta">
                     {highlight.journal}, {highlight.year} <span>{highlight.note}</span>
