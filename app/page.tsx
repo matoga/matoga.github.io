@@ -79,7 +79,7 @@ const software = [
   {
     name: 'BEC3 Status',
     description:
-      'Live experiment dashboard for lab telemetry, environmental data, images, and oscilloscope traces, built on Cloudflare D1. Still in active use, so it is password-protected.',
+      "Live dashboard for the lab's sensors, images, and oscilloscope traces, built on Cloudflare D1. Still in active use, so some features, like history, are password-protected.",
     site: 'https://bec3status.pages.dev/',
     image: '/software/bec3-status.png',
     imageAlt: 'Dark BEC3 lab status dashboard with image, air, and photodiode panels',
@@ -162,7 +162,7 @@ const highlights = [
     note: 'Co-author',
     title: 'A universal speed limit for spreading of coherence',
     summary:
-      'When a disordered Bose gas starts to condense, coherence first grows faster if the atoms interact more strongly. At larger distances, that advantage disappears. We found a universal upper rate set only by Planck\'s constant and the atom\'s mass, placing a fundamental limit on how quickly long-range quantum order can form.',
+      'When a disordered Bose gas starts to condense, coherence first grows faster if the atoms interact more strongly. At larger distances, that advantage disappears. We found a universal speed limit set only by Planck\'s constant and the atom\'s mass, placing a fundamental limit on how quickly long-range quantum order can form.',
     image: '/publications/nature-coherence.png',
     imageAlt: 'Ultracold atom experiment illuminated by green laser light',
     paper: 'https://www.nature.com/articles/s41586-025-09735-z',
@@ -409,7 +409,8 @@ export default function Home() {
             </a>
           </div>
           <p className="section-subtitle">
-            Small and larger projects or tools that might be worth sharing.
+            Built to solve problems from the lab or research, but might be useful (or just fun
+            to poke at) if you work with ultracold atoms too.
           </p>
 
           <ul className="software-list">
