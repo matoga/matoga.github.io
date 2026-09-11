@@ -15,14 +15,12 @@ export const metadata: Metadata = {
     title: 'Martin Gazo | Experimental quantum physics',
     description:
       'Research on turbulence and universal dynamics in homogeneous quantum gases.',
-    images: ['https://matoga.github.io/og.png'],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: 'Martin Gazo | Experimental quantum physics',
     description:
       'Research on turbulence and universal dynamics in homogeneous quantum gases.',
-    images: ['https://matoga.github.io/og.png'],
   },
 };
 
