@@ -8,19 +8,19 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: 'Martin Gazo | Experimental quantum physics',
+  title: 'Martin Gazo | Experimental physicist specialising in quantum gases',
   description:
-    'Martin Gazo is an experimental physicist who recently finished a PhD in quantum gases at the University of Cambridge, now looking for work outside academia.',
+    'Experimental physicist specialising in quantum gases.',
   openGraph: {
-    title: 'Martin Gazo | Experimental quantum physics',
+    title: 'Martin Gazo | Experimental physicist specialising in quantum gases',
     description:
-      'Research on turbulence and universal dynamics in homogeneous quantum gases.',
+      'Experimental physicist specialising in quantum gases.',
   },
   twitter: {
     card: 'summary',
-    title: 'Martin Gazo | Experimental quantum physics',
+    title: 'Martin Gazo | Experimental physicist specialising in quantum gases',
     description:
-      'Research on turbulence and universal dynamics in homogeneous quantum gases.',
+      'Experimental physicist specialising in quantum gases.',
   },
 };
 

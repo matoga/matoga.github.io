@@ -155,7 +155,7 @@ h1 {
   border-top: 1px solid var(--rule);
 }
 
-#publications {
+#highlights {
   padding-bottom: 0;
 }
 
@@ -388,7 +388,10 @@ h2 {
 .publication .journal {
   margin-top: 2px;
   color: var(--text);
-  font-style: italic;
+}
+
+.publication .coverage {
+  margin-top: 2px;
 }
 
 .author-glyph {

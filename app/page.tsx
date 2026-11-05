@@ -1,5 +1,27 @@
 import { HighlightCarousel } from './HighlightCarousel';
 
+const scienceCoverage = [
+    {
+      label: 'Cavendish Press Release',
+      href: 'https://www.phy.cam.ac.uk/news/ultracold-atoms-reveal-universal-rules-far-from-equilibrium/',
+    },
+  ];
+
+const natureCoverage = [
+    {
+      label: 'Cavendish Press Release',
+      href: 'https://www.phy.cam.ac.uk/news/a-speed-limit-for-spreading-of-coherence/',
+    },
+    {
+      label: 'Physics Today',
+      href: 'https://doi.org/10.1063/pt.ed9c465bbb',
+    },
+    {
+      label: 'CavMag',
+      href: 'https://cavmag.phy.cam.ac.uk/cavmag-35/how-fast-can-quantum-coherence-spread/index.html',
+    },
+  ];
+
 const publications = [
   {
     year: '2026',
@@ -14,8 +36,10 @@ const publications = [
     title: 'Observation of Vinen turbulence during far-from-equilibrium Bose-Einstein condensation',
     authors:
       'S. J. Morris, M. Gazo, S. M. Fischer, H. Zhang, C. J. Ho, N. R. Cooper, C. Eigen, Z. Hadzibabic',
-    journal: 'arXiv:2604.28191',
-    href: 'https://arxiv.org/abs/2604.28191',
+    journal: 'Physical Review Letters 137, 193403',
+    href: 'https://journals.aps.org/prl/abstract/10.1103/lywd-gjg9',
+    arxiv: 'https://arxiv.org/abs/2604.28191',
+    coverageLinks: [{ label: 'Physics Synopsis', href: 'https://physics.aps.org/articles/v19/s137' }],
   },
   {
     year: '2026',
@@ -34,6 +58,7 @@ const publications = [
     journal: 'Science 389, 802',
     href: 'https://doi.org/10.1126/science.ado3487',
     arxiv: 'https://arxiv.org/abs/2312.09248',
+    coverageLinks: scienceCoverage,
   },
   {
     year: '2025',
@@ -43,6 +68,7 @@ const publications = [
     journal: 'Nature 647, 608',
     href: 'https://www.nature.com/articles/s41586-025-09735-z',
     arxiv: 'https://arxiv.org/abs/2410.08204',
+    coverageLinks: natureCoverage,
   },
   {
     year: '2024',
@@ -69,14 +95,12 @@ const software = [
       'The largest project here, BESee is a C#/.NET desktop app for live viewing, fitting and analysing cold-atom absorption images. It is designed to load thousands of images efficiently and run fast CPU-based fits. It was inspired by Alex Gaunt’s Analysis GpUI and built as its replacement.',
     site: 'https://matoga.github.io/besee/',
     image: '/software/besee.png',
-    imageAlt: 'BESee download page showing the absorption-image analysis application',
   },
   {
     name: 'BEC3 Calculator',
     description: 'Web calculators for the Hadzibabic group’s BEC3 experiment, including Feshbach-field and box-trap calibrations.',
     site: 'https://bec3calculator.vercel.app/',
     image: '/software/bec3-calculator.png',
-    imageAlt: 'BEC3 Calculator showing atom, field, and unit-conversion panels',
   },
   {
     name: 'BEC3 Status',
@@ -84,7 +108,6 @@ const software = [
       "Live dashboard for the lab's sensors, images, and oscilloscope traces, built on Cloudflare D1. Still in active use, so some features, like history, are password-protected.",
     site: 'https://bec3status.pages.dev/',
     image: '/software/bec3-status.png',
-    imageAlt: 'Dark BEC3 lab status dashboard with image, air, and photodiode panels',
   },
   {
     name: '2D GPE',
@@ -92,7 +115,6 @@ const software = [
       'Browser-based interactive two-dimensional Gross-Pitaevskii equation simulator that is fun to play with!',
     site: 'https://web-gpe.vercel.app/',
     image: '/software/web-gpe.png',
-    imageAlt: 'Two-dimensional Bose-Einstein condensate simulation interface',
   },
   {
     name: 'Wave kinetic equation solver',
@@ -100,7 +122,6 @@ const software = [
     site: 'https://matoga.github.io/wke/',
     github: 'https://github.com/matoga/wke',
     image: '/software/wke.png',
-    imageAlt: 'Wave kinetic equation solver showing an initial distribution plot',
   },
   {
     name: 'Two-Component Imaginary Time GPE Solver',
@@ -109,7 +130,6 @@ const software = [
     site: 'https://imaggpe2comp.vercel.app/',
     github: 'https://github.com/matoga/imag-GPE-2-component-solver',
     image: '/software/two-component-gpe.png',
-    imageAlt: 'Two-component GPE simulation showing absorption images and density cuts',
     imagePosition: 'top',
   },
   {
@@ -118,21 +138,18 @@ const software = [
       'Web calculator for the Hadzibabic group’s earlier BEC2 experiment, covering 2D physics and trap calibrations, from pre-AI times.',
     site: 'https://bec2calculator.netlify.app/',
     image: '/software/bec2-calculator.png',
-    imageAlt: 'BEC2 dynamic calculator showing 2D physics, calibration, and unit-conversion panels',
   },
   {
     name: 'AMOP Wolfram Package',
     description: 'Wolfram Language package for atomic, molecular, and optical physics calculations.',
     github: 'https://github.com/matoga/amop',
     image: '/software/amop.png',
-    imageAlt: 'GitHub repository for the AMOP Wolfram Language package',
   },
   {
     name: 'Wolfram Autosave',
     description: 'Wolfram Language package that periodically saves a hidden backup of the current notebook.',
     github: 'https://github.com/matoga/wolfram-autosave',
     image: '/software/wolfram-autosave.png',
-    imageAlt: 'GitHub repository for the Wolfram Autosave package',
   },
 ];
 
@@ -147,7 +164,7 @@ const highlights = [
     images: [
       {
         src: '/publications/science-coarsening.png',
-        alt: 'Momentum distributions showing particle and energy transport and universal scaling',
+        alt: 'Figure from the Science paper',
       },
     ],
     paper: 'https://doi.org/10.1126/science.ado3487',
@@ -155,12 +172,7 @@ const highlights = [
       { label: 'Science', href: 'https://doi.org/10.1126/science.ado3487' },
       { label: 'arXiv', href: 'https://arxiv.org/abs/2312.09248' },
     ],
-    coverageLinks: [
-      {
-        label: 'Cavendish Press Release',
-        href: 'https://www.phy.cam.ac.uk/news/ultracold-atoms-reveal-universal-rules-far-from-equilibrium/',
-      },
-    ],
+    coverageLinks: scienceCoverage,
   },
   {
     journal: 'Nature',
@@ -172,11 +184,11 @@ const highlights = [
     images: [
       {
         src: '/publications/nature-coherence.png',
-        alt: 'Ultracold atom experiment illuminated by green laser light',
+        alt: 'Image for the Nature paper',
       },
       {
         src: '/publications/nature-speed-limit-plot.png',
-        alt: 'Coherence-length-squared growth curves for two interaction strengths, next to a speed-limit sign reading 3.4 ħ/m',
+        alt: 'Plot from the Nature paper',
       },
     ],
     paper: 'https://www.nature.com/articles/s41586-025-09735-z',
@@ -184,20 +196,7 @@ const highlights = [
       { label: 'Nature', href: 'https://www.nature.com/articles/s41586-025-09735-z' },
       { label: 'arXiv', href: 'https://arxiv.org/abs/2410.08204' },
     ],
-    coverageLinks: [
-      {
-        label: 'Cavendish Press Release',
-        href: 'https://www.phy.cam.ac.uk/news/a-speed-limit-for-spreading-of-coherence/',
-      },
-      {
-        label: 'Physics Today',
-        href: 'https://doi.org/10.1063/pt.ed9c465bbb',
-      },
-      {
-        label: 'CavMag',
-        href: 'https://cavmag.phy.cam.ac.uk/cavmag-35/how-fast-can-quantum-coherence-spread/index.html',
-      },
-    ],
+    coverageLinks: natureCoverage,
   },
 ];
 
@@ -232,8 +231,9 @@ export default function Home() {
         <a className="site-name" href="#about">Martin Gazo</a>
         <nav aria-label="Primary navigation">
           <a href="#about">about</a>
-          <a href="#publications">publications</a>
+          <a href="#highlights">research highlights</a>
           <a href="#software">software projects</a>
+          <a href="#papers">all papers</a>
         </nav>
       </header>
 
@@ -311,9 +311,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section" id="publications">
+        <section className="section" id="highlights">
           <div className="section-title-row">
-            <h2>Publications</h2>
+            <h2>Research highlights</h2>
             <a
               className="section-link"
               href="https://scholar.google.com/citations?user=YmTW0ekAAAAJ&hl=en"
@@ -367,41 +367,6 @@ export default function Home() {
               </article>
             ))}
           </div>
-
-          <h3 className="all-papers-title">All papers</h3>
-
-          <ol className="publication-list">
-            {publications.map((publication) => (
-              <li key={publication.href}>
-                <span className="year">{publication.year}</span>
-                <div className="publication">
-                  <a
-                    className="publication-title"
-                    href={publication.href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {publication.title}
-                  </a>
-                  <p>{renderAuthors(publication)}</p>
-                  {publication.authorNote && <p className="author-note">{publication.authorNote}</p>}
-                  <p className="journal">
-                    <a href={publication.href} target="_blank" rel="noreferrer">
-                      {publication.journal}
-                    </a>
-                    {publication.arxiv && (
-                      <>
-                        {' · '}
-                        <a href={publication.arxiv} target="_blank" rel="noreferrer">
-                          arXiv
-                        </a>
-                      </>
-                    )}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ol>
         </section>
 
         <section className="section" id="software">
@@ -434,7 +399,7 @@ export default function Home() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={project.image}
-                    alt={project.imageAlt}
+                    alt={`${project.name} screenshot`}
                     width={1200}
                     height={800}
                     style={{ objectPosition: project.imagePosition ?? 'center' }}
@@ -464,6 +429,58 @@ export default function Home() {
               </li>
             ))}
           </ul>
+        </section>
+
+        <section className="section" id="papers">
+          <div className="section-title-row">
+            <h2>All papers</h2>
+          </div>
+
+          <ol className="publication-list">
+            {publications.map((publication) => (
+              <li key={publication.href}>
+                <span className="year">{publication.year}</span>
+                <div className="publication">
+                  <a
+                    className="publication-title"
+                    href={publication.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {publication.title}
+                  </a>
+                  <p>{renderAuthors(publication)}</p>
+                  {publication.authorNote && <p className="author-note">{publication.authorNote}</p>}
+                  <p className="journal">
+                    <a href={publication.href} target="_blank" rel="noreferrer">
+                      {publication.journal}
+                    </a>
+                    {publication.arxiv && (
+                      <>
+                        {' · '}
+                        <a href={publication.arxiv} target="_blank" rel="noreferrer">
+                          arXiv
+                        </a>
+                      </>
+                    )}
+                  </p>
+                  {publication.coverageLinks && (
+                    <p className="coverage">
+                      Coverage:{' '}
+                      {publication.coverageLinks.map((link, index) => (
+                        <span key={link.href}>
+                          {index > 0 && ' · '}
+                          <a href={link.href} target="_blank" rel="noreferrer">
+                            {link.label}
+                          </a>
+                        </span>
+                      ))}
+                    </p>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ol>
         </section>
       </main>
 
