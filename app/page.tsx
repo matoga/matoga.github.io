@@ -39,17 +39,28 @@ const publications = [
     journal: 'Physical Review Letters 137, 193403',
     href: 'https://journals.aps.org/prl/abstract/10.1103/lywd-gjg9',
     arxiv: 'https://arxiv.org/abs/2604.28191',
-    coverageLinks: [{ label: 'Physics Synopsis', href: 'https://physics.aps.org/articles/v19/s137' }],
+    coverageLinks: [
+      { label: 'Physics Synopsis', href: 'https://physics.aps.org/articles/v19/s137' },
+      {
+        label: 'New Scientist',
+        href: 'https://www.newscientist.com/article/2597812-weird-ultraquantum-turbulence-seen-for-the-first-time/',
+      },
+      {
+        label: 'Measuring Relaxation (artwork by Ling Pui Sze)',
+        href: 'https://www.lingpuisze.com/measuring-relaxation--24347-35947-28204-37327.html',
+      },
+    ],
   },
   {
     year: '2026',
-    title: 'A nonequilibrium equation of state for a turbulent 2D Bose gas',
+    title: 'Nonequilibrium equation of state for a turbulent 2D Bose gas',
     authors: 'Y. Jiang, N. Maslov, A. Karailiev, C. Eigen, M. Gazo, Z. Hadzibabic',
     equalContributionAuthors: ['Y. Jiang', 'N. Maslov'],
     correspondingAuthor: 'M. Gazo',
     authorNote: '* Equal contribution',
-    journal: 'arXiv:2602.06131',
-    href: 'https://arxiv.org/abs/2602.06131',
+    journal: 'Physical Review Letters 137, 203401',
+    href: 'https://journals.aps.org/prl/abstract/10.1103/lh2x-jn4m',
+    arxiv: 'https://arxiv.org/abs/2602.06131',
   },
   {
     year: '2025',
