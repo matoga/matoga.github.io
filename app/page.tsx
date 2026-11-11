@@ -30,6 +30,7 @@ const publications = [
       'S. M. Fischer, M. Gazo, S. J. Morris, N. Maslov, H. Zhang, J. Etrych, G. Martirosyan, C. Eigen, Z. Hadzibabic',
     journal: 'arXiv:2605.22906',
     href: 'https://arxiv.org/abs/2605.22906',
+    image: '/publications/weak-wave-turbulence.png',
   },
   {
     year: '2026',
@@ -38,6 +39,7 @@ const publications = [
       'S. J. Morris, M. Gazo, S. M. Fischer, H. Zhang, C. J. Ho, N. R. Cooper, C. Eigen, Z. Hadzibabic',
     journal: 'Physical Review Letters 137, 193403',
     href: 'https://journals.aps.org/prl/abstract/10.1103/lywd-gjg9',
+    image: '/publications/vinen.png',
     arxiv: 'https://arxiv.org/abs/2604.28191',
     coverageLinks: [
       { label: 'Physics Synopsis', href: 'https://physics.aps.org/articles/v19/s137' },
@@ -60,6 +62,7 @@ const publications = [
     authorNote: '* Equal contribution',
     journal: 'Physical Review Letters 137, 203401',
     href: 'https://journals.aps.org/prl/abstract/10.1103/lh2x-jn4m',
+    image: '/publications/eos-2d.png',
     arxiv: 'https://arxiv.org/abs/2602.06131',
   },
   {
@@ -68,6 +71,7 @@ const publications = [
     authors: 'M. Gazo, A. Karailiev, T. Satoor, C. Eigen, M. Gałka, Z. Hadzibabic',
     journal: 'Science 389, 802',
     href: 'https://doi.org/10.1126/science.ado3487',
+    image: '/publications/coarsening.png',
     arxiv: 'https://arxiv.org/abs/2312.09248',
     coverageLinks: scienceCoverage,
   },
@@ -78,6 +82,7 @@ const publications = [
       'G. Martirosyan, M. Gazo, J. Etrych, S. M. Fischer, S. J. Morris, C. J. Ho, C. Eigen, Z. Hadzibabic',
     journal: 'Nature 647, 608',
     href: 'https://www.nature.com/articles/s41586-025-09735-z',
+    image: '/publications/speed-limit.jpg',
     arxiv: 'https://arxiv.org/abs/2410.08204',
     coverageLinks: natureCoverage,
   },
@@ -87,6 +92,7 @@ const publications = [
     authors: 'A. Karailiev, M. Gazo, M. Gałka, C. Eigen, T. Satoor, Z. Hadzibabic',
     journal: 'Physical Review Letters 133, 243402',
     href: 'https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.133.243402',
+    image: '/publications/inverse-cascade.jpeg',
     arxiv: 'https://arxiv.org/abs/2405.01537',
   },
   {
@@ -95,6 +101,7 @@ const publications = [
     authors: 'M. Gałka, P. Christodoulou, M. Gazo, A. Karailiev, N. Dogra, J. Schmitt, Z. Hadzibabic',
     journal: 'Physical Review Letters 129, 190402',
     href: 'https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.129.190402',
+    image: '/publications/wave-turbulence-2d.jpg',
     arxiv: 'https://arxiv.org/abs/2203.09514',
   },
 ];
@@ -489,6 +496,12 @@ export default function Home() {
                     </p>
                   )}
                 </div>
+                {publication.image && (
+                  <a className="publication-thumb" href={publication.href} target="_blank" rel="noreferrer">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={publication.image} alt="" loading="lazy" />
+                  </a>
+                )}
               </li>
             ))}
           </ol>

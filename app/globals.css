@@ -355,7 +355,7 @@ h2 {
 
 .publication-list li {
   display: grid;
-  grid-template-columns: 58px 1fr;
+  grid-template-columns: 58px 1fr 132px;
   gap: 18px;
   padding: 22px 0;
   border-top: 1px solid var(--rule);
@@ -392,6 +392,24 @@ h2 {
 
 .publication .coverage {
   margin-top: 2px;
+}
+
+.publication-thumb {
+  align-self: start;
+}
+
+.publication-thumb {
+  justify-self: end;
+}
+
+.publication-thumb img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 96px;
+  border-radius: 4px;
+  background: #fff;
 }
 
 .author-glyph {
@@ -523,7 +541,7 @@ footer {
   }
 
   .publication-list li {
-    grid-template-columns: 44px 1fr;
+    grid-template-columns: 44px 1fr 80px;
     gap: 10px;
   }
 
